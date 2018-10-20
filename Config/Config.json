@@ -25,7 +25,17 @@
       "expiresIn":  "2h",
       "algorithm":  "HS256"
     },
-    "secretKey" : "SUPER_SECRET-PASSWORD!123?"
+    "secretKey" : "SUPER_SECRET-PASSWORD!123?",
+    "emailData" : {
+      "host": "smtp.gmail.com",
+      "port": "587",
+      "secure": false,
+      "auth": {
+        "user": "bridgestonegaranteeprogram@gmail.com",
+        "pass": "fyfyfyfy"
+      }
+    },
+    "tmplsPath" : "\\Assets\\Templates\\"
   },
   "prod" : {
     "port" : 0,
@@ -53,7 +63,17 @@
       "expiresIn":  "",
       "algorithm":  ""
     },
-    "secretKey" : "SUPER_SECRET-PASSWORD!123?"
+    "secretKey" : "SUPER_SECRET-PASSWORD!123?",
+    "emailData" : {
+      "host": "smtp.gmail.com",
+      "port": "587",
+      "secure": false,
+      "auth": {
+        "user": "",
+        "pass": ""
+      }
+    },
+    "tmplsPath" : "/Assets/Templates/"
   },
   "injectionData" : {
     "Routes" : [{"name" : "Home","path" :""},{"name" :"Users","path" :"Users"},{"name" :"Auth","path" :"Auth"}],

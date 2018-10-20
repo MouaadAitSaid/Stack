@@ -3,7 +3,8 @@ let Response = require('../Factories/ResponseBuilder'),
     _u = require('../Factories/Utilities'),
     mongoose = require('mongoose'),
     User = mongoose.model('User'),
-    _a = require('async');
+    _a = require('async'),
+    _mailer = require("../Factories/EmailSender");
 
 
 routes = [
@@ -17,6 +18,22 @@ routes = [
                 let user = new User(req.body);
                 return user.save((err) => {
                     if (!err) {
+                        let emailData = {
+                            lastName: req.body.lastName,
+                            firstName: req.body.firstName,
+                            username: req.body.username,
+                            password: req.body.password
+                        };
+                        let attachements = [
+                            {path: "C:\\Users\\lenovo\\Pictures\\z.png",filename : "z.png"},
+                            {path: "C:\\Users\\lenovo\\Pictures\\a.png",filename : "a.png"},
+                            {path: "C:\\Users\\lenovo\\Pictures\\s.png",filename : "s.png"}
+                        ];
+
+                        _mailer.sendEmail(emailData, global.gConfig.tmplsPath + "UserCreation.html", attachements, [req.body.email], "Account Created",
+                            (response) => {
+                                _u.console("w", true, `Response Email : ${JSON.stringify(response)}`);
+                            });
                         return Response.build(res, 200, {status: true, message: "Welcome to Users page"});
                     }
                     return Response.build(res, 508, {status: false, message: "User not saved"});
@@ -102,8 +119,11 @@ routes = [
             try {
                 return User.findById(req.params.id, (err, user) => {
                     if (err) return Response.build(res, 508, {status: false, message: "Oups, something went wrong"});
-                    user.remove((err)=>{
-                        if (err) return Response.build(res, 508, {status: false, message: "Oups, something went wrong"});
+                    user.remove((err) => {
+                        if (err) return Response.build(res, 508, {
+                            status: false,
+                            message: "Oups, something went wrong"
+                        });
                         return Response.build(res, 200, {status: true, message: "User Deleted"});
                     })
                 })
@@ -126,13 +146,13 @@ updateUser = (old, user, cb) => {
     old.password = user.password;
     cb(old);
 };
-module.exports = function (app,routePrefix) {
+module.exports = function (app, routePrefix) {
 
     _.each(routes, function (route) {
         /* route.middleware.unshift(function (req, res, next) {
              AuthCtrl.ensureAuthorizedApi(req, res, next, routesApiUser)
          });*/
-        let goodPath = `/${routePrefix}${(route.path.trim().length!==0)?"/"+route.path:''}`;
+        let goodPath = `/${routePrefix}${(route.path.trim().length !== 0) ? "/" + route.path : ''}`;
         let args = _.flatten([goodPath, route.middleware]);
 
         switch (route.httpMethod) {

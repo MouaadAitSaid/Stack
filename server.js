@@ -5,7 +5,11 @@ let _ = require('lodash'),
     methodOverride = require('method-override'),
     _config = require('./Config/Config.js'),// getting th config file
     _u = require("./Factories/Utilities"),
+    path = require('path'),
     app = express();
+
+
+global.appRoot = path.resolve(__dirname);
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
