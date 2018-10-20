@@ -4,7 +4,7 @@ let _ = require('lodash'),
     bodyParser = require('body-parser'),
     methodOverride = require('method-override'),
     _config = require('./Config/Config.js'),// getting th config file
-    _u = require("./Services/Utilities"),
+    _u = require("./Factories/Utilities"),
     app = express();
 
 // parse application/x-www-form-urlencoded

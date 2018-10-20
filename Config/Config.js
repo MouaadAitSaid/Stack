@@ -1,6 +1,6 @@
 // requires
 const _ = require('lodash');
-const _u = require("../Services/Utilities")
+const _u = require("../Factories/Utilities")
 // module variables
 const config = require('./Config.json');
 const defaultConfig = config.dev;

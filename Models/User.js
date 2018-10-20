@@ -1,5 +1,5 @@
 let mp = require("mongoose-paginate"),
-    _u = require("../Services/Utilities");
+    _u = require("../Factories/Utilities");
 
 // exporting model to server
 module.exports = (mongoose) => {

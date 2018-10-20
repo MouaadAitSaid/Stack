@@ -1,6 +1,6 @@
-let Response = require('../Services/ResponseBuilder'),
+let Response = require('../Factories/ResponseBuilder'),
     _ = require('lodash'),
-    _u = require('../Services/Utilities'),
+    _u = require('../Factories/Utilities'),
     mongoose = require('mongoose'),
     User = mongoose.model('User');
 

@@ -3,13 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="6fdfa839-456d-454f-befc-e6122e489d05" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/Config.json" beforeDir="false" afterPath="$PROJECT_DIR$/Config/Config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/Config.js" beforeDir="false" afterPath="$PROJECT_DIR$/Config/Config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/AuthController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/AuthController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/HomeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/HomeController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/UsersController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UsersController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/Models/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Utilities.js" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Utilities.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/ResponseBuilder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Utilities.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -80,15 +81,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="5089" />
-          <entry key="json" value="425" />
+          <entry key="js" value="5331" />
+          <entry key="json" value="573" />
           <entry key="txt" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="425" />
-          <entry key="JavaScript" value="5089" />
+          <entry key="JSON" value="573" />
+          <entry key="JavaScript" value="5331" />
           <entry key="PLAIN_TEXT" value="13" />
         </counts>
       </usages-collector>
@@ -121,7 +122,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Services/Utilities.js">
+        <entry file="file://$PROJECT_DIR$/Factories/Utilities.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="4" column="52" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="52" />
@@ -129,20 +130,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Controllers/AuthController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+            <state relative-caret-position="255">
+              <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Config/Config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+            <state relative-caret-position="85">
+              <caret line="5" column="24" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -168,8 +169,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controllers/UsersController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="96" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="96" />
+            <state relative-caret-position="-3">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
@@ -221,9 +222,9 @@
         <option value="$PROJECT_DIR$/Controllers/HomeController.js" />
         <option value="$PROJECT_DIR$/Models/User.js" />
         <option value="$PROJECT_DIR$/Controllers/UsersController.js" />
-        <option value="$PROJECT_DIR$/Controllers/AuthController.js" />
         <option value="$PROJECT_DIR$/Services/Utilities.js" />
         <option value="$PROJECT_DIR$/Config/Config.json" />
+        <option value="$PROJECT_DIR$/Controllers/AuthController.js" />
       </list>
     </option>
   </component>
@@ -286,11 +287,6 @@
               <item name="Stack" type="b2602c69:ProjectViewProjectNode" />
               <item name="Stack" type="462c0819:PsiDirectoryNode" />
               <item name="Models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Stack" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Stack" type="462c0819:PsiDirectoryNode" />
-              <item name="Services" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -361,7 +357,7 @@
       <workItem from="1539966425172" duration="242000" />
       <workItem from="1540028365742" duration="4946000" />
       <workItem from="1540033509448" duration="5301000" />
-      <workItem from="1540038851689" duration="23856000" />
+      <workItem from="1540038851689" duration="25865000" />
     </task>
     <task id="LOCAL-00001" summary="some work at server, begin loading Routes">
       <created>1539941455885</created>
@@ -419,11 +415,25 @@
       <option name="project" value="LOCAL" />
       <updated>1540058700942</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="stack v2, adding Users Logic  Done.">
+      <created>1540063115502</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1540063115502</updated>
+    </task>
+    <task id="LOCAL-00010" summary="stack v2, adding Users Logic  Done.">
+      <created>1540067521465</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1540067521465</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43268000" />
+    <option name="totallyTimeSpent" value="45277000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -436,9 +446,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23595506" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23595506" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -451,9 +460,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4990086" weight="0.32907802" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49834764" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5009914" side_tool="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50165236" side_tool="true" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" x="3" y="8" width="1530" height="808" id="Terminal" order="11" sideWeight="0.49966952" type="FLOATING" weight="0.3248227" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32907802" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -514,7 +523,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Services/ResponseBuilder.js">
+    <entry file="file://$PROJECT_DIR$/Factories/ResponseBuilder.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="9" lean-forward="true" selection-end-line="20" selection-end-column="2" />
@@ -569,21 +578,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controllers/UsersController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="96" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controllers/AuthController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Services/Utilities.js">
+    <entry file="file://$PROJECT_DIR$/Factories/Utilities.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="52" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="52" />
@@ -592,8 +587,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Config/Config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        <state relative-caret-position="85">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/UsersController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/AuthController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
         </state>
       </provider>
     </entry>
