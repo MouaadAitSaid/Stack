@@ -1,15 +1,32 @@
+let bcrypt = require('bcrypt');
+
+hashPassword = (user,cb)=>{
+  return bcrypt.genSalt(global.gConfig.bcrypt.saltRounds,(err, salt) =>{
+        return bcrypt.hash(user.password, salt, function(err, hash) {
+            if(err){
+                this.printInConsole('w',true,"Error generation hash for password");
+                return null;
+            }
+            this.printInConsole('w',false,{"password" : hash,"salt" : salt});
+            cb({"password" : hash,"salt" : salt ,"user" : user});
+        });
+    });
+};
 getReq = (req, val) => {
     switch (val) {
         case true :
             let url = req.protocol + '://' + req.get('host') + req.originalUrl;
             let body = JSON.stringify(req.body);
+            let params = JSON.stringify(req.params);
             let zwaqa = `\n${"*".repeat(30)}\n`;
-            console.info(`${zwaqa}Route Activated :\n - URL : "${url}".\n - BODY :\n ${body}.${zwaqa}`);
+            console.info(`${zwaqa}Route Activated :\n - URL : "${url}".\n - PARAMS : "${params}".\n - BODY :\n ${body}.${zwaqa}`);
             break;
         case false :
             return null;
     }
 };
+
+
 
 printInConsole = (type, val, message) => {
     switch (val) {
@@ -39,5 +56,6 @@ printInConsole = (type, val, message) => {
 };
 module.exports = {
     PrintReq: getReq,
-    console: printInConsole
+    console: printInConsole,
+    hashPassword : hashPassword
 };

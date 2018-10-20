@@ -10,6 +10,9 @@
       "host" : "localhost",
       "port" : "27017",
       "name" : "MEAN"
+    },
+    "bcrypt" : {
+      "saltRounds" : 2
     }
   },
   "prod" : {
@@ -23,6 +26,9 @@
       "host" : "",
       "port" : "",
       "name" : ""
+    },
+    "bcrypt" : {
+      "saltRounds" : 0
     }
   }
 }
