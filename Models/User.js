@@ -11,10 +11,10 @@ module.exports = (mongoose) => {
         lastName: {type: String, required: true, unique: false},
         email: {type: String, required: true, unique: true},
         username: {type: String, required: true, unique: true},
-        password: {type: String, required: true},
+        password: {type: String, required: true,select: false},
         role: {type: String, required: true},
         otherInfos: {},
-        salt: String,
+        salt: { type : String,select: false},
         created_at: {type: Date, default: Date.now()},
         updated_at: Date
     };

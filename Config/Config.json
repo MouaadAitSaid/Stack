@@ -13,7 +13,12 @@
     },
     "bcrypt" : {
       "saltRounds" : 2
-    }
+    },
+    "jwtOptions" :{
+      "expiresIn":  "2h",
+      "algorithm":  "HS256"
+    },
+    "secretKey" : "SUPER_SECRET-PASSWORD!123?"
   },
   "prod" : {
     "port" : 0,
@@ -29,7 +34,12 @@
     },
     "bcrypt" : {
       "saltRounds" : 0
-    }
+    },
+    "jwtOptions" :{
+      "expiresIn":  "",
+      "algorithm":  ""
+    },
+    "secretKey" : "SUPER_SECRET-PASSWORD!123?"
   },
   "injectionData" : {
     "Routes" : [{"name" : "Home","path" :""},{"name" :"Users","path" :"Users"},{"name" :"Auth","path" :"Auth"}],

@@ -1,6 +1,8 @@
 let Response = require('../Services/ResponseBuilder'),
     _ = require('lodash'),
-    _u = require('../Services/Utilities');
+    _u = require('../Services/Utilities'),
+    mongoose = require('mongoose'),
+    User = mongoose.model('User');
 
 
 routes = [
@@ -9,21 +11,50 @@ routes = [
         httpMethod: 'Post',
         require: {},
         middleware: [function (req, res) {
-            _u.PrintReq(req,true);
-            return Response.build(res, 200, {status: true, message: "Welcome to home page"});
+            _u.PrintReq(req, true);
+            try {
+                return User.findOne({username: req.body.username}).select('+password').exec((err, user) => {
+                    if (err) return Response.build(res, 508, {status: false, message: "Oups, something went wrong"});
+                    if (!user) return Response.build(res, 200, {status: true, message: "No User Found", data: null});
+                    return _u.comparePasswords(user.password, req.body.password, (isGoodPassword) => {
+                        if (!isGoodPassword) return Response.build(res, 200, {
+                            status: true,
+                            message: "User found, Wrong password",
+                            data: null
+                        });
+                        user.password = null;
+                        user.salt = null;
+                        _u.getToken({
+                            firstName: user.firstName,
+                            email: user.email,
+                            lastName: user.lastName,
+                            role: user.role,
+                            otherInfos: user.otherInfos
+                        }, (token) => {
+                            return Response.build(res, 200, {
+                                status: true,
+                                message: "Login Done. Welcome :) .",
+                                token: token
+                            });
+                        });
 
-
+                    })
+                })
+            } catch (e) {
+                _u.console("e", true, e);
+                return Response.build(res, 508, {status: false, message: "Oups, something went wrong"});
+            }
         }]
     }
 ]
 
-module.exports = function (app,routePrefix) {
+module.exports = function (app, routePrefix) {
 
     _.each(routes, function (route) {
         /* route.middleware.unshift(function (req, res, next) {
              AuthCtrl.ensureAuthorizedApi(req, res, next, routesApiUser)
          });*/
-        let goodPath = `/${routePrefix}${(route.path.trim().length!==0)?"/"+route.path:''}`;
+        let goodPath = `/${routePrefix}${(route.path.trim().length !== 0) ? "/" + route.path : ''}`;
         let args = _.flatten([goodPath, route.middleware]);
 
         switch (route.httpMethod) {

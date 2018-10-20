@@ -18,9 +18,9 @@ routes = [
                 return user.save((err) => {
                     if (!err) {
                         return Response.build(res, 200, {status: true, message: "Welcome to Users page"});
-                    } else {
-                        return Response.build(res, 508, {status: false, message: "User not saved"});
                     }
+                    return Response.build(res, 508, {status: false, message: "User not saved"});
+
                 });
             } catch (e) {
                 _u.console("e", true, e);

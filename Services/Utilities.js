@@ -1,15 +1,38 @@
-let bcrypt = require('bcrypt');
+let bcrypt = require('bcrypt'),
+    jwt = require('jsonwebtoken');
+
+tokenFactory = (payload,cb)=>{
+    return jwt.sign(payload,global.gConfig.secretKey,global.gConfig.jwtOptions,(err,token)=>{
+        if(err){
+            printInConsole('e',true,"Error generation Token" + err);
+            return null;
+        }
+        cb(token);
+    })
+};
 
 hashPassword = (user,cb)=>{
   return bcrypt.genSalt(global.gConfig.bcrypt.saltRounds,(err, salt) =>{
         return bcrypt.hash(user.password, salt, function(err, hash) {
             if(err){
-                this.printInConsole('w',true,"Error generation hash for password");
+                printInConsole('e',true,"Error generation hash for password");
                 return null;
             }
             this.printInConsole('w',false,{"password" : hash,"salt" : salt});
             cb({"password" : hash,"salt" : salt ,"user" : user});
         });
+    });
+};
+
+comparePasswords = (hashedPass,incmingpass,cb)=>{
+
+    return  bcrypt.compare(incmingpass,hashedPass,(err,res)=>{
+        if(err){
+            printInConsole('e',true,"Error Comparing passwords");
+            return null;
+        }
+
+        cb(res);
     });
 };
 
@@ -58,5 +81,7 @@ printInConsole = (type, val, message) => {
 module.exports = {
     PrintReq: getReq,
     console: printInConsole,
-    hashPassword : hashPassword
+    hashPassword : hashPassword,
+    comparePasswords : comparePasswords,
+    getToken : tokenFactory
 };
