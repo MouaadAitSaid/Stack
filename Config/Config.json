@@ -1,10 +1,28 @@
 {
   "dev" : {
     "port" : 1994,
-    "server" : "localhost"
+    "server" : "localhost",
+    "sAdmin" : {
+      "username" : "sAdmin",
+      "password" : "m"
+    },
+    "database" : {
+      "host" : "localhost",
+      "port" : "27017",
+      "name" : "MEAN"
+    }
   },
   "prod" : {
     "port" : 0,
-    "server" : ""
+    "server" : "",
+    "sAdmin" : {
+      "username" : "",
+      "password" : ""
+    },
+    "database" : {
+      "host" : "",
+      "port" : "",
+      "name" : ""
+    }
   }
 }

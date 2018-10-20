@@ -1,6 +1,6 @@
 // requires
 const _ = require('lodash');
-
+const _u = require("../Services/Utilities")
 // module variables
 const config = require('./Config.json');
 const defaultConfig = config.dev;
@@ -14,4 +14,4 @@ const finalConfig = _.merge(defaultConfig, environmentConfig);
 global.gConfig = finalConfig;
 
 // log global.gConfig
-console.log(`global.gConfig: ${JSON.stringify(global.gConfig, undefined, global.gConfig.json_indentation)}`);
+_u.console('i',false,`global.gConfig: ${JSON.stringify(global.gConfig, undefined, global.gConfig.json_indentation)}`);
