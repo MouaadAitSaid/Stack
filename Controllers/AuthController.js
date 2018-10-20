@@ -5,17 +5,18 @@ let Response = require('../Services/ResponseBuilder'),
 
 routes = [
     {
-        path: '',
-        httpMethod: 'Get',
+        path: `login`,
+        httpMethod: 'Post',
         require: {},
         middleware: [function (req, res) {
-            _u.PrintReq(req, false);
+            _u.PrintReq(req,true);
             return Response.build(res, 200, {status: true, message: "Welcome to home page"});
 
 
         }]
     }
 ]
+
 module.exports = function (app,routePrefix) {
 
     _.each(routes, function (route) {

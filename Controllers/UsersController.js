@@ -1,6 +1,5 @@
 let Response = require('../Services/ResponseBuilder'),
     _ = require('lodash'),
-    prefix = 'Users',
     _u = require('../Services/Utilities'),
     mongoose = require('mongoose'),
     User = mongoose.model('User'),
@@ -9,7 +8,7 @@ let Response = require('../Services/ResponseBuilder'),
 
 routes = [
     {  // Saving the record
-        path: `/${prefix}`,
+        path: '',
         httpMethod: 'Post',
         require: {},
         middleware: [function (req, res) {
@@ -32,7 +31,7 @@ routes = [
         }]
     },
     {  // getting the list
-        path: `/${prefix}`,
+        path: '',
         httpMethod: 'Get',
         require: {},
         middleware: [function (req, res) {
@@ -49,7 +48,7 @@ routes = [
         }]
     },
     {  // getting the record
-        path: `/${prefix}/:id`,
+        path: ':id',
         httpMethod: 'Get',
         require: {},
         middleware: [function (req, res) {
@@ -66,7 +65,7 @@ routes = [
         }]
     },
     {  // modifying the record
-        path: `/${prefix}/:id`,
+        path: ':id',
         httpMethod: 'Put',
         require: {},
         middleware: [function (req, res) {
@@ -95,7 +94,7 @@ routes = [
         }]
     },
     {  // removing  the record
-        path: `/${prefix}/:id`,
+        path: ':id',
         httpMethod: 'Del',
         require: {},
         middleware: [function (req, res) {
@@ -127,13 +126,14 @@ updateUser = (old, user, cb) => {
     old.password = user.password;
     cb(old);
 };
-module.exports = function (app) {
+module.exports = function (app,routePrefix) {
 
     _.each(routes, function (route) {
         /* route.middleware.unshift(function (req, res, next) {
              AuthCtrl.ensureAuthorizedApi(req, res, next, routesApiUser)
          });*/
-        let args = _.flatten([route.path, route.middleware]);
+        let goodPath = `/${routePrefix}${(route.path.trim().length!==0)?"/"+route.path:''}`;
+        let args = _.flatten([goodPath, route.middleware]);
 
         switch (route.httpMethod) {
             case 'Get':
@@ -149,7 +149,7 @@ module.exports = function (app) {
                 app.delete.apply(app, args);
                 break;
             default:
-                throw new Error('Invalid HTTP method specified for route ' + route.path);
+                throw new Error(`Invalid HTTP method specified for route : "${goodPath}"`);
 
         }
     });

@@ -12,6 +12,7 @@ hashPassword = (user,cb)=>{
         });
     });
 };
+
 getReq = (req, val) => {
     switch (val) {
         case true :

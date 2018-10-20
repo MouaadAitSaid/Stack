@@ -25,9 +25,9 @@ process.env.NODE_ENV = 'dev';
 // Connecting MongoDB database :
 
 
-// defining Models
-const Models = ['User'];
-_.forEach(Models, (prefix) => {
+// injecting Models
+
+_.forEach(global.injectionData.Models, (prefix) => {
     try {
         require("./Models/" + prefix)(mongoose);
     } catch (e) {
@@ -35,14 +35,14 @@ _.forEach(Models, (prefix) => {
     }
 });
 
-// defining Controllers :
-const Routes = ['Home','Users'];
+// injecting Controllers :
 
-_.forEach(Routes, (prefix) => {
+
+_.forEach(global.injectionData.Routes, (route) => {
     try {
-        require("./Controllers/" + prefix + "Controller")(app);
+        require("./Controllers/" + route.name + "Controller")(app,route.path);
     } catch (e) {
-        _u.console('w',true,`Failed to load route "${prefix}" : ${e}`);
+        _u.console('w',true,`Failed to load route "${route.name}" : ${e}`);
     }
 
 });

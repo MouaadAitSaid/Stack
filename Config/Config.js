@@ -13,5 +13,8 @@ const finalConfig = _.merge(defaultConfig, environmentConfig);
 // and their names should always begin with g
 global.gConfig = finalConfig;
 
+// Loading dependecy injection data.
+global.injectionData =  config["injectionData"]
+
 // log global.gConfig
 _u.console('i',false,`global.gConfig: ${JSON.stringify(global.gConfig, undefined, global.gConfig.json_indentation)}`);
