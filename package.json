@@ -1,0 +1,35 @@
+{
+  "name": "aitsaid_folio",
+  "version": "1.0.0",
+  "description": "web site of AIT SAID Mouaad, web developper, and computer enginieer.",
+  "main": "index.js",
+  "scripts": {
+    "test": "testPA"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MouaadAitSaid/MyPortFolio.git"
+  },
+  "keywords": [
+    "javascript",
+    "nodeJs",
+    "Angular7",
+    "ExpressJs",
+    "MongoDB"
+  ],
+  "author": "Mouaad AIT SAID",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MouaadAitSaid/MyPortFolio/issues"
+  },
+  "homepage": "https://github.com/MouaadAitSaid/MyPortFolio#readme",
+  "dependencies": {
+    "async": "^2.6.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "lodash": "^4.17.11",
+    "method-override": "^3.0.0",
+    "moment": "^2.22.2",
+    "mongoose": "^5.3.4"
+  }
+}

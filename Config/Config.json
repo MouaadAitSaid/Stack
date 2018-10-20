@@ -1,0 +1,10 @@
+{
+  "dev" : {
+    "port" : 1994,
+    "server" : "localhost"
+  },
+  "prod" : {
+    "port" : 0,
+    "server" : ""
+  }
+}
