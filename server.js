@@ -1,6 +1,7 @@
 let _ = require('lodash'),
     express = require('express'),
     bodyParser = require('body-parser'),
+    mongoose = require('mongoose'),
     methodOverride = require('method-override'),
     _config = require('./Config/Config.js'),// getting th config file
     app = express();
@@ -15,12 +16,12 @@ app.use(express.static(__dirname + '/public')); // set the static files location
 // setting the evironnement :
 process.env.NODE_ENV = 'dev';
 
-// defining Routes :
-const Routes = ['Home'];
+// defining Controllers :
+const Routes = ['Home','Users'];
 
 _.forEach(Routes, (prefix) => {
     try {
-        require("./Routes/" + prefix + "Controller")(app);
+        require("./Controllers/" + prefix + "Controller")(app);
         console.log(`success to load route "${prefix}"`);
     } catch (e) {
         console.log(`Failed to load route "${prefix}" : ${e}`);
@@ -28,10 +29,10 @@ _.forEach(Routes, (prefix) => {
 
 });
 // defining Models
-const Models = [];
+const Models = ['User'];
 _.forEach(Models, (prefix) => {
     try {
-        require("./Models/" + prefix + "Model");
+        require("./Models/" + prefix)(mongoose);
     } catch (e) {
         console.log(`Failed to load Model ${e.message}`);
     }

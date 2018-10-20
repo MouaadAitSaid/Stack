@@ -1,6 +1,7 @@
-let Response = require('../Services/ResponseBuilder');
-let _ = require('lodash');
-let prefix = '';
+let Response = require('../Services/ResponseBuilder'),
+    _ = require('lodash'),
+    prefix = 'Users',
+    _u = require('../Services/Utilities');
 
 
 routes = [
@@ -9,8 +10,8 @@ routes = [
         httpMethod: 'Get',
         require: {},
         middleware: [function (req, res) {
-
-            return Response.build(res, 200, {status :true, message : "Welcome to home page"});
+            _u.PrintReq(req,true);
+            return Response.build(res, 200, {status: true, message: "Welcome to Users page"});
 
 
         }]
@@ -45,4 +46,3 @@ module.exports = function (app) {
     });
 
 }
-
