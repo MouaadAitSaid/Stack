@@ -4,7 +4,14 @@
     "server" : "localhost",
     "sAdmin" : {
       "username" : "sAdmin",
-      "password" : "m"
+      "password" : "m",
+      "firstName": "Super",
+      "email": "aitsaidmouaadoff@gmail.com",
+      "lastName": "ADMIN",
+      "role": "SuperAdmin",
+      "otherInfos": {
+
+      }
     },
     "database" : {
       "host" : "localhost",
@@ -25,7 +32,14 @@
     "server" : "",
     "sAdmin" : {
       "username" : "",
-      "password" : ""
+      "password" : "",
+      "firstName": "",
+      "email": "",
+      "lastName": "",
+      "role": "SuperAdmin",
+      "otherInfos": {
+
+      }
     },
     "database" : {
       "host" : "",
