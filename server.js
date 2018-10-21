@@ -4,15 +4,15 @@ let _ = require('lodash'),
     bodyParser = require('body-parser'),
     methodOverride = require('method-override'),
     _config = require('./Config/Config.js'),// getting th config file
-    _u = require("./Factories/Utilities"),
     path = require('path'),
-    app = express();
+    app = express(),
+    async = require("async");
 
 //seeting the root path to global variable
 global.appRoot = path.resolve(__dirname);
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({extended: false}));
 
 // parse application/json
 app.use(bodyParser.json());
@@ -26,32 +26,25 @@ app.use(express.static(__dirname + '/public')); // set the static files location
 process.env.NODE_ENV = 'dev';
 
 
-
-
-
-
 // injecting Models
 
 _.forEach(global.injectionData.Models, (prefix) => {
     try {
         require("./Models/" + prefix)(mongoose);
     } catch (e) {
-        _u.console('w',true,`Failed to load Model "${prefix}" ${e}`);
+        console.log(`Failed to load Model "${prefix}" ${e}`, true);
     }
 });
 
-
-// Token Verification before Routes
-app.use(_u.verifyToken);
 
 // injecting Routes :
 
 
 _.forEach(global.injectionData.Routes, (route) => {
     try {
-        require("./Controllers/" + route.name + "Controller")(app,route.path);
+        require("./Controllers/" + route.name + "Controller")(app);
     } catch (e) {
-        _u.console('w',true,`Failed to load route "${route.name}" : ${e}`);
+        console.log(`Failed to load route "${route.name}" : ${e}`, true);
     }
 
 });
@@ -67,9 +60,9 @@ mongoose.set('useCreateIndex', true); //  Version warning problem resolution (  
 let dbHost = global.gConfig.database.host;
 let dbName = global.gConfig.database.name;
 let dbPort = global.gConfig.database.port;
-mongoose.connect(`mongodb://${dbHost}:${dbPort}/${dbName}`,{ useNewUrlParser: true },(err)=>{
-    if(err)_u.console('w',true,`Database not connected "mongodb://${dbHost}:${dbPort}/${dbName}\n ${err}"`);
-    else _u.console('i',true,`Database connected "mongodb://${dbHost}:${dbPort}/${dbName}"`);
+mongoose.connect(`mongodb://${dbHost}:${dbPort}/${dbName}`, {useNewUrlParser: true}, (err) => {
+    if (err) console.log(`Database not connected "mongodb://${dbHost}:${dbPort}/${dbName}\n ${err}"`, true);
+    else console.log(`Database connected "mongodb://${dbHost}:${dbPort}/${dbName}"`, true);
 
 });
 
@@ -77,5 +70,5 @@ app.listen(global.gConfig.port, function () {
     let port = global.gConfig.port
     let host = global.gConfig.server
 
-    _u.console('i',true,`app listening at "http://${host}:${port}"`)
+    console.log(`app listening at "http://${host}:${port}"`, true)
 });

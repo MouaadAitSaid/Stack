@@ -4,17 +4,17 @@ let _ = require('lodash'),
     User = mongoose.model('User');
 
 
-routes = [
+routesAuths = [
     {
-        path: `login`,
-        httpMethod: 'Post',
+        path: `/Auth/login`,
+        httpMethod: 'POST',
         require: {},
         middleware: [function (req, res) {
             _u.PrintReq(req, true);
             try {
                 switch (req.body.username) {
                     case global.gConfig.sAdmin.username :
-                        if(global.gConfig.sAdmin.password!==req.body.password){
+                        if (global.gConfig.sAdmin.password !== req.body.password) {
                             return _u.build(res, 200, {
                                 status: true,
                                 message: "Invalid credentiels",
@@ -34,7 +34,11 @@ routes = [
                     default :
                         return User.findOne({username: req.body.username}).select('+password').exec((err, user) => {
                             if (err) return _u.build(res, 508, {status: false, message: "Oups, something went wrong"});
-                            if (!user) return _u.build(res, 200, {status: true, message: "Invalid credentiels", data: null});
+                            if (!user) return _u.build(res, 200, {
+                                status: true,
+                                message: "Invalid credentiels",
+                                data: null
+                            });
                             return _u.comparePasswords(user.password, req.body.password, (isGoodPassword) => {
                                 if (!isGoodPassword) return _u.build(res, 200, {
                                     status: true,
@@ -44,6 +48,7 @@ routes = [
                                 user.password = null;
                                 user.salt = null;
                                 _u.getToken({
+                                    _id: user._id,
                                     firstName: user.firstName,
                                     email: user.email,
                                     lastName: user.lastName,
@@ -69,26 +74,27 @@ routes = [
     }
 ]
 
-module.exports = function (app, routePrefix) {
+module.exports = function (app) {
 
-    _.each(routes, function (route) {
-        /* route.middleware.unshift(function (req, res, next) {
-             AuthCtrl.ensureAuthorizedApi(req, res, next, routesApiUser)
-         });*/
-        let goodPath = `/${routePrefix}${(route.path.trim().length !== 0) ? "/" + route.path : ''}`;
+
+    _.each(routesAuths, function (route) {
+        route.middleware.unshift((req, res, next) => {
+            _u.verifyToken(req, res, next, routesAuths);
+        });
+        let goodPath = route.path;
         let args = _.flatten([goodPath, route.middleware]);
 
         switch (route.httpMethod) {
-            case 'Get':
+            case 'GET':
                 app.get.apply(app, args);
                 break;
-            case 'Post':
+            case 'POST':
                 app.post.apply(app, args);
                 break;
-            case 'Put':
+            case 'PUT':
                 app.put.apply(app, args);
                 break;
-            case 'Del':
+            case 'DELETE':
                 app.delete.apply(app, args);
                 break;
             default:
@@ -96,5 +102,4 @@ module.exports = function (app, routePrefix) {
 
         }
     });
-
-}
+};

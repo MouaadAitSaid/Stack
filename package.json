@@ -39,6 +39,7 @@
     "mongoose-gridfs": "^0.5.0",
     "mongoose-paginate": "^5.0.3",
     "nodemailer": "^4.6.8",
-    "nodemailer-smtp-transport": "^2.7.4"
+    "nodemailer-smtp-transport": "^2.7.4",
+    "underscore": "^1.9.1"
   }
 }

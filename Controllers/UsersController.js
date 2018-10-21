@@ -6,14 +6,14 @@ let _ = require('lodash'),
     _mailer = require("../Factories/EmailSender");
 
 
-routes = [
+routesUser = [
     {  // Saving the record
-        path: '',
-        httpMethod: 'Post',
+        path: '/Users',
+        httpMethod: 'POST',
         require: {
             superAdmin : false,
-            token : true,
-            role : "Admin"
+            token : false,
+            roles : ["Admin"]
         },
         middleware: [function (req, res) {
             _u.PrintReq(req, true,req.headers);
@@ -51,15 +51,15 @@ routes = [
         }]
     },
     {  // getting the list
-        path: '',
-        httpMethod: 'Get',
+        path: '/Users',
+        httpMethod: 'GET',
         require: {
             superAdmin : false,
             token : true,
-            role : "Admin"
+            roles : ["admin"]
         },
         middleware: [function (req, res) {
-            _u.PrintReq(req, true,req.headers);
+            _u.PrintReq(req, false,req.headers);
             try {
                 return User.find({}, (err, users) => {
                     return _u.build(res, 200, {status: true, message: "Users Loaded", data: users});
@@ -72,12 +72,12 @@ routes = [
         }]
     },
     {  // getting the record
-        path: ':id',
-        httpMethod: 'Get',
+        path: '/Users/:id',
+        httpMethod: 'GET',
         require: {
             superAdmin : false,
             token : true,
-            role : "Admin"
+            roles : ["Admin"]
         },
         middleware: [function (req, res) {
             _u.PrintReq(req, true);
@@ -93,12 +93,12 @@ routes = [
         }]
     },
     {  // modifying the record
-        path: ':id',
-        httpMethod: 'Put',
+        path: '/Users/:id',
+        httpMethod: 'PUT',
         require: {
             superAdmin : false,
             token : true,
-            role : "Admin"
+            roles : ["admin"]
         },
         middleware: [function (req, res) {
             _u.PrintReq(req, true);
@@ -126,12 +126,12 @@ routes = [
         }]
     },
     {  // removing  the record
-        path: ':id',
-        httpMethod: 'Del',
+        path: '/Users/:id',
+        httpMethod: 'DELETE',
         require: {
             superAdmin : false,
             token : true,
-            role : "Admin"
+            roles : ["Admin"]
         },
         middleware: [function (req, res) {
             _u.PrintReq(req, true);
@@ -165,26 +165,26 @@ updateUser = (old, user, cb) => {
     old.password = user.password;
     cb(old);
 };
-module.exports = function (app, routePrefix) {
+module.exports = function (app) {
 
-    _.each(routes, function (route) {
-        /* route.middleware.unshift(function (req, res, next) {
-             AuthCtrl.ensureAuthorizedApi(req, res, next, routesApiUser)
-         });*/
-        let goodPath = `/${routePrefix}${(route.path.trim().length !== 0) ? "/" + route.path : ''}`;
+    _.each(routesUser, function (route) {
+        route.middleware.unshift((req, res, next) => {
+            _u.verifyToken(req, res, next, routesUser);
+        });
+        let goodPath =  route.path ;
         let args = _.flatten([goodPath, route.middleware]);
 
         switch (route.httpMethod) {
-            case 'Get':
+            case 'GET':
                 app.get.apply(app, args);
                 break;
-            case 'Post':
+            case 'POST':
                 app.post.apply(app, args);
                 break;
-            case 'Put':
+            case 'PUT':
                 app.put.apply(app, args);
                 break;
-            case 'Del':
+            case 'DELETE':
                 app.delete.apply(app, args);
                 break;
             default:

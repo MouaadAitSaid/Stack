@@ -1,5 +1,6 @@
 {
   "dev" : {
+    "activateConsoles" : true,
     "port" : 1994,
     "server" : "localhost",
     "sAdmin" : {
@@ -11,7 +12,8 @@
       "role": "SuperAdmin",
       "otherInfos": {
 
-      }
+      },
+      "ActiveSuperAdmin" : true
     },
     "database" : {
       "host" : "localhost",
@@ -38,6 +40,7 @@
     "tmplsPath" : "\\Assets\\Templates\\"
   },
   "prod" : {
+    "activateConsoles" : true,
     "port" : 0,
     "server" : "",
     "sAdmin" : {
@@ -49,7 +52,8 @@
       "role": "SuperAdmin",
       "otherInfos": {
 
-      }
+      },
+      "ActiveSuperAdmin" : true
     },
     "database" : {
       "host" : "",

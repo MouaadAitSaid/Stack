@@ -1,6 +1,6 @@
 // requires
 const _ = require('lodash');
-const _u = require("../Factories/Utilities")
+
 // module variables
 const config = require('./Config.json');
 const defaultConfig = config.dev;
@@ -17,4 +17,4 @@ global.gConfig = finalConfig;
 global.injectionData =  config["injectionData"]
 
 // log global.gConfig
-_u.console('i',false,`global.gConfig: ${JSON.stringify(global.gConfig, undefined, global.gConfig.json_indentation)}`);
+//console.log(`global.gConfig: ${JSON.stringify(global.gConfig, undefined, global.gConfig.json_indentation)}`);

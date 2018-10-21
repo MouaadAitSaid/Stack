@@ -1,5 +1,4 @@
-let mp = require("mongoose-paginate"),
-    _u = require("../Factories/Utilities");
+let mp = require("mongoose-paginate");
 
 // exporting model to server
 module.exports = (mongoose) => {
@@ -25,14 +24,25 @@ module.exports = (mongoose) => {
 
     // setting new Date when updating
     model.pre('save', function (next) {
-        _u.hashPassword(this,(res)=>{
+        hashPassword(this,(res)=>{
             res.user.updated_at = Date.now();
             res.user.salt = res.salt;
             res.user.password = res.password;
             next();
         });
     });
-    // defining methods
+    hashPassword = (user, cb) => {
+        return bcrypt.genSalt(global.gConfig.bcrypt.saltRounds, (err, salt) => {
+            return bcrypt.hash(user.password, salt, function (err, hash) {
+                if (err) {
+                    printInConsole('e', true, "Error generation hash for password");
+                    return null;
+                }
+                this.printInConsole('w', false, {"password": hash, "salt": salt});
+                cb({"password": hash, "salt": salt, "user": user});
+            });
+        });
+    };
 
 
     // linking plugins (ssentielly the paginate one)

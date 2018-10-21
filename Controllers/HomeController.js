@@ -2,10 +2,10 @@ let _ = require('lodash'),
     _u = require('../Factories/Utilities');
 
 
-routes = [
+routesHome = [
     {
         path: '',
-        httpMethod: 'Get',
+        httpMethod: 'GET',
         require: {},
         middleware: [function (req, res) {
             _u.PrintReq(req, false);
@@ -15,26 +15,26 @@ routes = [
         }]
     }
 ]
-module.exports = function (app,routePrefix) {
+module.exports = function (app) {
 
-    _.each(routes, function (route) {
-        /* route.middleware.unshift(function (req, res, next) {
-             AuthCtrl.ensureAuthorizedApi(req, res, next, routesApiUser)
-         });*/
-        let goodPath = `/${routePrefix}${(route.path.trim().length!==0)?"/"+route.path:''}`;
+    _.each(routesHome, function (route) {
+        route.middleware.unshift((req, res, next) => {
+            _u.verifyToken(req, res, next, routesHome);
+        });
+        let goodPath = route.path;
         let args = _.flatten([goodPath, route.middleware]);
 
         switch (route.httpMethod) {
-            case 'Get':
+            case 'GET':
                 app.get.apply(app, args);
                 break;
-            case 'Post':
+            case 'POST':
                 app.post.apply(app, args);
                 break;
-            case 'Put':
+            case 'PUT':
                 app.put.apply(app, args);
                 break;
-            case 'Del':
+            case 'DELETE':
                 app.delete.apply(app, args);
                 break;
             default:
