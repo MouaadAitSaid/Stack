@@ -1,5 +1,4 @@
-let Response = require('../Factories/ResponseBuilder'),
-    _ = require('lodash'),
+let _ = require('lodash'),
     _u = require('../Factories/Utilities');
 
 
@@ -10,7 +9,7 @@ routes = [
         require: {},
         middleware: [function (req, res) {
             _u.PrintReq(req, false);
-            return Response.build(res, 200, {status: true, message: "Welcome to home page"});
+            return _u.build(res, 200, {status: true, message: "Welcome to home page"});
 
 
         }]

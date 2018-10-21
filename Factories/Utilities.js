@@ -11,6 +11,25 @@ tokenFactory = (payload,cb)=>{
     })
 };
 
+BuildResponse = (res, code, msg) => {
+
+    switch (code) {
+        case 500 :
+            console.log('Internal error (500): %s', msg);
+            return res.status(500).json({error: msg});
+
+        default :
+            if (msg) {
+                return res.status(code).json(msg);
+            } else {
+                return res.sendStatus(code);
+            }
+
+    }
+};
+
+
+
 hashPassword = (user,cb)=>{
   return bcrypt.genSalt(global.gConfig.bcrypt.saltRounds,(err, salt) =>{
         return bcrypt.hash(user.password, salt, function(err, hash) {
@@ -36,14 +55,16 @@ comparePasswords = (hashedPass,incmingpass,cb)=>{
     });
 };
 
-getReq = (req, val) => {
+getReq = (req, val,headerVal) => {
     switch (val) {
         case true :
             let url = req.protocol + '://' + req.get('host') + req.originalUrl;
             let body = JSON.stringify(req.body);
             let params = JSON.stringify(req.params);
             let zwaqa = `\n${"*".repeat(30)}\n`;
-            console.info(`${zwaqa}Route Activated :\n - URL : "${url}".\n - PARAMS : "${params}".\n - BODY :\n ${body}.${zwaqa}`);
+            let header;
+            if(headerVal)  header = JSON.stringify(headerVal)
+            console.info(`${zwaqa}Route Activated :\n - URL : "${url}".\n - PARAMS :\n "${params}".\n - BODY :\n ${body}\n  ${(headerVal)?'- Header : \n' +header : ''}${zwaqa}.`);
             break;
         case false :
             return null;
@@ -78,10 +99,20 @@ printInConsole = (type, val, message) => {
     }
 
 };
+
+verifyToken = (req, res, next)=>{
+     let token = req.params.authorization || req.body.token  || req.headers['authorization'] ;
+     printInConsole("w",true,`TOKEN ${token}`);
+
+     next();
+};
+
 module.exports = {
     PrintReq: getReq,
     console: printInConsole,
     hashPassword : hashPassword,
     comparePasswords : comparePasswords,
-    getToken : tokenFactory
+    getToken : tokenFactory,
+    verifyToken : verifyToken,
+    build: BuildResponse
 };

@@ -1,5 +1,4 @@
-let Response = require('../Factories/ResponseBuilder'),
-    _ = require('lodash'),
+let _ = require('lodash'),
     _u = require('../Factories/Utilities'),
     mongoose = require('mongoose'),
     User = mongoose.model('User'),
@@ -11,9 +10,13 @@ routes = [
     {  // Saving the record
         path: '',
         httpMethod: 'Post',
-        require: {},
+        require: {
+            superAdmin : false,
+            token : true,
+            role : "Admin"
+        },
         middleware: [function (req, res) {
-            _u.PrintReq(req, true);
+            _u.PrintReq(req, true,req.headers);
             try {
                 let user = new User(req.body);
                 return user.save((err) => {
@@ -32,16 +35,16 @@ routes = [
 
                         _mailer.sendEmail(emailData, global.gConfig.tmplsPath + "UserCreation.html", attachements, [req.body.email], "Account Created",
                             (response) => {
-                                _u.console("w", true, `Response Email : ${JSON.stringify(response)}`);
+                                _u.console("w", true, `_u Email : ${JSON.stringify(response)}`);
                             });
-                        return Response.build(res, 200, {status: true, message: "Welcome to Users page"});
+                        return _u.build(res, 200, {status: true, message: "Welcome to Users page"});
                     }
-                    return Response.build(res, 508, {status: false, message: "User not saved"});
+                    return _u.build(res, 508, {status: false, message: "User not saved"});
 
                 });
             } catch (e) {
                 _u.console("e", true, e);
-                return Response.build(res, 508, {status: false, message: "Oups, something went wrong"});
+                return _u.build(res, 508, {status: false, message: "Oups, something went wrong"});
             }
 
 
@@ -50,61 +53,73 @@ routes = [
     {  // getting the list
         path: '',
         httpMethod: 'Get',
-        require: {},
+        require: {
+            superAdmin : false,
+            token : true,
+            role : "Admin"
+        },
         middleware: [function (req, res) {
-            _u.PrintReq(req, true);
+            _u.PrintReq(req, true,req.headers);
             try {
                 return User.find({}, (err, users) => {
-                    return Response.build(res, 200, {status: true, message: "Users Loaded", data: users});
+                    return _u.build(res, 200, {status: true, message: "Users Loaded", data: users});
                 })
 
             } catch (e) {
                 _u.console("e", true, e);
-                return Response.build(res, 508, {status: false, message: "Oups, something went wrong"});
+                return _u.build(res, 508, {status: false, message: "Oups, something went wrong"});
             }
         }]
     },
     {  // getting the record
         path: ':id',
         httpMethod: 'Get',
-        require: {},
+        require: {
+            superAdmin : false,
+            token : true,
+            role : "Admin"
+        },
         middleware: [function (req, res) {
             _u.PrintReq(req, true);
             try {
                 return User.findById(req.params.id, (err, user) => {
-                    return Response.build(res, 200, {status: true, message: "User Loaded", data: user});
+                    return _u.build(res, 200, {status: true, message: "User Loaded", data: user});
                 })
 
             } catch (e) {
                 _u.console("e", true, e);
-                return Response.build(res, 508, {status: false, message: "Oups, something went wrong"});
+                return _u.build(res, 508, {status: false, message: "Oups, something went wrong"});
             }
         }]
     },
     {  // modifying the record
         path: ':id',
         httpMethod: 'Put',
-        require: {},
+        require: {
+            superAdmin : false,
+            token : true,
+            role : "Admin"
+        },
         middleware: [function (req, res) {
             _u.PrintReq(req, true);
 
             try {
                 return User.findById(req.params.id, (err, user) => {
-                    if (err) return Response.build(res, 508, {status: false, message: "Oups, something went wrong"});
+                    if (err) return _u.build(res, 508, {status: false, message: "Oups, something went wrong"});
                     updateUser(user, req.body, (newUser) => {
                         newUser.save((err) => {
-                            if (err) return Response.build(res, 508, {
+                            if (err) return _u.build(res, 508, {
                                 status: false,
                                 message: "Oups, something went wrong"
                             });
-                            return Response.build(res, 200, {status: true, message: "User Updated", data: newUser});
+                            return _u.build(res, 200, {status: true, message: "User Updated", data: newUser});
                         });
                     });
                 })
 
             } catch (e) {
                 _u.console("e", true, e);
-                return Response.build(res, 508, {status: false, message: "Oups, something went wrong"});
+                return _u.build(res, 508, {status: false, message: "Oups, something went wrong"});
             }
 
 
@@ -113,24 +128,28 @@ routes = [
     {  // removing  the record
         path: ':id',
         httpMethod: 'Del',
-        require: {},
+        require: {
+            superAdmin : false,
+            token : true,
+            role : "Admin"
+        },
         middleware: [function (req, res) {
             _u.PrintReq(req, true);
             try {
                 return User.findById(req.params.id, (err, user) => {
-                    if (err) return Response.build(res, 508, {status: false, message: "Oups, something went wrong"});
+                    if (err) return _u.build(res, 508, {status: false, message: "Oups, something went wrong"});
                     user.remove((err) => {
-                        if (err) return Response.build(res, 508, {
+                        if (err) return _u.build(res, 508, {
                             status: false,
                             message: "Oups, something went wrong"
                         });
-                        return Response.build(res, 200, {status: true, message: "User Deleted"});
+                        return _u.build(res, 200, {status: true, message: "User Deleted"});
                     })
                 })
 
             } catch (e) {
                 _u.console("e", true, e);
-                return Response.build(res, 508, {status: false, message: "Oups, something went wrong"});
+                return _u.build(res, 508, {status: false, message: "Oups, something went wrong"});
             }
 
 

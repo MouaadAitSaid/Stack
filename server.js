@@ -8,7 +8,7 @@ let _ = require('lodash'),
     path = require('path'),
     app = express();
 
-
+//seeting the root path to global variable
 global.appRoot = path.resolve(__dirname);
 
 // parse application/x-www-form-urlencoded
@@ -26,7 +26,8 @@ app.use(express.static(__dirname + '/public')); // set the static files location
 process.env.NODE_ENV = 'dev';
 
 
-// Connecting MongoDB database :
+
+
 
 
 // injecting Models
@@ -39,7 +40,11 @@ _.forEach(global.injectionData.Models, (prefix) => {
     }
 });
 
-// injecting Controllers :
+
+// Token Verification before Routes
+app.use(_u.verifyToken);
+
+// injecting Routes :
 
 
 _.forEach(global.injectionData.Routes, (route) => {
@@ -50,6 +55,11 @@ _.forEach(global.injectionData.Routes, (route) => {
     }
 
 });
+
+// When Route is 404 (Not working Yet)
+/*app.use(function(req, res, next) {
+    res.status(404);
+});*/
 /*app.get('/', function (req, res) {
     res.send(global.gConfig);
 })*/

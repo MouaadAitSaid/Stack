@@ -1,5 +1,4 @@
-let Response = require('../Factories/ResponseBuilder'),
-    _ = require('lodash'),
+let _ = require('lodash'),
     _u = require('../Factories/Utilities'),
     mongoose = require('mongoose'),
     User = mongoose.model('User');
@@ -16,7 +15,7 @@ routes = [
                 switch (req.body.username) {
                     case global.gConfig.sAdmin.username :
                         if(global.gConfig.sAdmin.password!==req.body.password){
-                            return Response.build(res, 200, {
+                            return _u.build(res, 200, {
                                 status: true,
                                 message: "Invalid credentiels",
                                 data: null
@@ -26,7 +25,7 @@ routes = [
                         saData.username = null;
                         saData.password = null;
                         return _u.getToken(saData, (token) => {
-                            return Response.build(res, 200, {
+                            return _u.build(res, 200, {
                                 status: true,
                                 message: "Login Done. Welcome Super Admin. :) .",
                                 token: token
@@ -34,10 +33,10 @@ routes = [
                         });
                     default :
                         return User.findOne({username: req.body.username}).select('+password').exec((err, user) => {
-                            if (err) return Response.build(res, 508, {status: false, message: "Oups, something went wrong"});
-                            if (!user) return Response.build(res, 200, {status: true, message: "Invalid credentiels", data: null});
+                            if (err) return _u.build(res, 508, {status: false, message: "Oups, something went wrong"});
+                            if (!user) return _u.build(res, 200, {status: true, message: "Invalid credentiels", data: null});
                             return _u.comparePasswords(user.password, req.body.password, (isGoodPassword) => {
-                                if (!isGoodPassword) return Response.build(res, 200, {
+                                if (!isGoodPassword) return _u.build(res, 200, {
                                     status: true,
                                     message: "Invalid credentiels",
                                     data: null
@@ -51,7 +50,7 @@ routes = [
                                     role: user.role,
                                     otherInfos: user.otherInfos
                                 }, (token) => {
-                                    return Response.build(res, 200, {
+                                    return _u.build(res, 200, {
                                         status: true,
                                         message: "Login Done. Welcome :) .",
                                         token: token
@@ -64,7 +63,7 @@ routes = [
 
             } catch (e) {
                 _u.console("e", true, e);
-                return Response.build(res, 508, {status: false, message: "Oups, something went wrong"});
+                return _u.build(res, 508, {status: false, message: "Oups, something went wrong"});
             }
         }]
     }
