@@ -12,7 +12,7 @@ routesUser = [
         httpMethod: 'POST',
         require: {
             superAdmin : false,
-            token : false,
+            token : true,
             roles : ["Admin"]
         },
         middleware: [function (req, res) {

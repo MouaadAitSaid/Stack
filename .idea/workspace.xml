@@ -2,16 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fdfa839-456d-454f-befc-e6122e489d05" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Config/Config.js" beforeDir="false" afterPath="$PROJECT_DIR$/Config/Config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/Config.json" beforeDir="false" afterPath="$PROJECT_DIR$/Config/Config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/AuthController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/AuthController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/HomeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/HomeController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/e2e/protractor.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/e2e/src/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/e2e/src/app.po.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/e2e/tsconfig.e2e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/app-routing.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/app.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/browserslist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/environments/environment.prod.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/environments/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/polyfills.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/tslint.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/UsersController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UsersController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Factories/Utilities.js" beforeDir="false" afterPath="$PROJECT_DIR$/Factories/Utilities.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/Models/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -85,16 +108,16 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="234" />
-          <entry key="js" value="8889" />
-          <entry key="json" value="748" />
+          <entry key="js" value="8893" />
+          <entry key="json" value="756" />
           <entry key="txt" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="234" />
-          <entry key="JSON" value="748" />
-          <entry key="JavaScript" value="8889" />
+          <entry key="JSON" value="756" />
+          <entry key="JavaScript" value="8893" />
           <entry key="PLAIN_TEXT" value="19" />
         </counts>
       </usages-collector>
@@ -103,78 +126,33 @@
           <entry key="]" value="1" />
           <entry key="gitignore" value="1" />
           <entry key="html" value="1" />
-          <entry key="js" value="50" />
-          <entry key="json" value="6" />
+          <entry key="js" value="51" />
+          <entry key="json" value="11" />
           <entry key="npm" value="1" />
+          <entry key="scss" value="1" />
+          <entry key="ts" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="JSON" value="6" />
-          <entry key="JavaScript" value="50" />
+          <entry key="JSON" value="10" />
+          <entry key="JavaScript" value="51" />
           <entry key="PLAIN_TEXT" value="3" />
+          <entry key="SCSS" value="1" />
+          <entry key="TypeScript" value="1" />
+          <entry key="tsconfig" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts">
+        <counts>
+          <entry key="Angular2LanguageService" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Config/Config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Controllers/UsersController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="61" column="48" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Models/User.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="38" selection-start-column="38" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controllers/HomeController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Factories/Utilities.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="174" column="28" selection-start-line="174" selection-start-column="28" selection-end-line="174" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -192,8 +170,11 @@
       <find>/:id</find>
       <find>Response</find>
       <find>routes</find>
-      <find>Authorization header is null</find>
       <find>_u</find>
+      <find>4200</find>
+      <find>Authorization header is null</find>
+      <find>port</find>
+      <find>defaul</find>
     </findStrings>
     <replaceStrings>
       <replace>_u.console</replace>
@@ -227,6 +208,7 @@
         <option value="$PROJECT_DIR$/Factories/Utilities.js" />
         <option value="$PROJECT_DIR$/Models/User.js" />
         <option value="$PROJECT_DIR$/Controllers/UsersController.js" />
+        <option value="$PROJECT_DIR$/ClientApp/.angular-cli.json" />
       </list>
     </option>
   </component>
@@ -245,12 +227,12 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/Client/node_modules" />
+    <handled-path value="$PROJECT_DIR$/ClientApp/node_modules" />
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
-      <path value="$PROJECT_DIR$/Client/package.json" />
+      <path value="$PROJECT_DIR$/ClientApp/package.json" />
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
@@ -277,22 +259,18 @@
             <path>
               <item name="Stack" type="b2602c69:ProjectViewProjectNode" />
               <item name="Stack" type="462c0819:PsiDirectoryNode" />
-              <item name="Config" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientApp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Stack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Stack" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Stack" type="b2602c69:ProjectViewProjectNode" />
               <item name="Stack" type="462c0819:PsiDirectoryNode" />
               <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Stack" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Stack" type="462c0819:PsiDirectoryNode" />
-              <item name="Factories" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Stack" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Stack" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -305,7 +283,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="8.11.3" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MongoData" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ClientApp/package.json" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -320,8 +298,8 @@
     <property name="node.js.selected.package.tslint" value="C:\Users\lenovo\Projects\MyPortFolio\Client\node_modules\tslint" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
-    <property name="ts.external.directory.path" value="C:\Users\lenovo\Projects\MyPortFolio\Client\node_modules\typescript\lib" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="ts.external.directory.path" value="C:\Users\lenovo\Projects\Stack\ClientApp\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -340,13 +318,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.Run Angular Server">
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-js-file="server.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <configuration name="portfolio" type="NodeJSConfigurationType" factoryName="Node.js" path-to-js-file="server.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
+    <configuration name="Run Angular Server" type="js.build_tools.npm" factoryName="npm">
+      <package-json value="$PROJECT_DIR$/ClientApp/package.json" />
+      <command value="start" />
+      <arguments value="--no-progress" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Node.js.portfolio" />
+      <item itemvalue="npm.Run Angular Server" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" BundledDictionaries="5" BundledDictionary0="css.dic" BundledDictionary1="less.dic" BundledDictionary2="jetbrains.dic" BundledDictionary3="vue.dic" BundledDictionary4="english.dic" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="project-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
@@ -367,7 +357,7 @@
       <workItem from="1540033509448" duration="5301000" />
       <workItem from="1540038851689" duration="33620000" />
       <workItem from="1540077376201" duration="2676000" />
-      <workItem from="1540120491269" duration="16298000" />
+      <workItem from="1540120491269" duration="18049000" />
     </task>
     <task id="LOCAL-00001" summary="some work at server, begin loading Routes">
       <created>1539941455885</created>
@@ -460,11 +450,18 @@
       <option name="project" value="LOCAL" />
       <updated>1540124396038</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="stack v3, adding Email Logic  Done.">
+      <created>1540137052949</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1540137052949</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72006000" />
+    <option name="totallyTimeSpent" value="73757000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -477,15 +474,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.3966443" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22147651" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" x="1" y="30" width="767" height="793" id="Run" order="2" type="WINDOWED" visible="true" weight="1.0" />
+      <window_info anchor="bottom" x="0" y="23" width="1536" height="801" id="Run" order="2" type="WINDOWED" visible="true" weight="1.0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -504,11 +500,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/Client/node_modules/karma/config.tpl.js" />
-      </list>
-    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -631,13 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controllers/HomeController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/compiler/compiler.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
@@ -675,8 +659,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Controllers/UsersController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="61" column="48" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="48" />
+        <state relative-caret-position="219">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/HomeController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="11716" column="22" selection-start-line="11716" selection-start-column="18" selection-end-line="11716" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/protractor.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/.angular-cli.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="57" column="18" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/typings.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
