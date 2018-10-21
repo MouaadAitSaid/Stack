@@ -2,39 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fdfa839-456d-454f-befc-e6122e489d05" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/back-office/back-office-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/back-office/back-office.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/back-office/bo-menu/bo-menu.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/back-office/bo-menu/bo-menu.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/back-office/bo-menu/bo-menu.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/back-office/config-management/config-management.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/back-office/config-management/config-management.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/back-office/config-management/config-management.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/back-office/home-admin/home-admin.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/back-office/home-admin/home-admin.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/back-office/home-admin/home-admin.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/back-office/users-management/users-management.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/back-office/users-management/users-management.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/back-office/users-management/users-management.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/front-office/bf-menu/bf-menu.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/front-office/bf-menu/bf-menu.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/front-office/bf-menu/bf-menu.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/front-office/front-office-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/front-office/front-office.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/angular.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/e2e/protractor.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/e2e/src/app.e2e-spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/e2e/src/app.po.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/e2e/tsconfig.e2e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/app-routing.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/app.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/app.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/app.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/app.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/assets/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/browserslist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/environments/environment.prod.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/environments/environment.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/karma.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/main.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/polyfills.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/styles.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/tsconfig.app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/tsconfig.spec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/tslint.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/tslint.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/UsersController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UsersController.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -110,6 +98,7 @@
           <entry key="html" value="234" />
           <entry key="js" value="8893" />
           <entry key="json" value="756" />
+          <entry key="ts" value="2" />
           <entry key="txt" value="19" />
         </counts>
       </usages-collector>
@@ -119,6 +108,7 @@
           <entry key="JSON" value="756" />
           <entry key="JavaScript" value="8893" />
           <entry key="PLAIN_TEXT" value="19" />
+          <entry key="TypeScript" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -130,7 +120,7 @@
           <entry key="json" value="11" />
           <entry key="npm" value="1" />
           <entry key="scss" value="1" />
-          <entry key="ts" value="1" />
+          <entry key="ts" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -140,7 +130,7 @@
           <entry key="JavaScript" value="51" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="SCSS" value="1" />
-          <entry key="TypeScript" value="1" />
+          <entry key="TypeScript" value="6" />
           <entry key="tsconfig" value="1" />
         </counts>
       </usages-collector>
@@ -152,7 +142,64 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ClientApp/src/app/app.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#58#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ClientApp/src/app/back-office/back-office-routing.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ClientApp/src/app/back-office/back-office.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ClientApp/src/app/front-office/front-office.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ClientApp/src/app/front-office/front-office-routing.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -209,6 +256,7 @@
         <option value="$PROJECT_DIR$/Models/User.js" />
         <option value="$PROJECT_DIR$/Controllers/UsersController.js" />
         <option value="$PROJECT_DIR$/ClientApp/.angular-cli.json" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/back-office/back-office.module.ts" />
       </list>
     </option>
   </component>
@@ -270,7 +318,25 @@
             <path>
               <item name="Stack" type="b2602c69:ProjectViewProjectNode" />
               <item name="Stack" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Stack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Stack" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="back-office" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Stack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Stack" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="front-office" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -357,7 +423,7 @@
       <workItem from="1540033509448" duration="5301000" />
       <workItem from="1540038851689" duration="33620000" />
       <workItem from="1540077376201" duration="2676000" />
-      <workItem from="1540120491269" duration="18049000" />
+      <workItem from="1540120491269" duration="20011000" />
     </task>
     <task id="LOCAL-00001" summary="some work at server, begin loading Routes">
       <created>1539941455885</created>
@@ -457,11 +523,18 @@
       <option name="project" value="LOCAL" />
       <updated>1540137052949</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="stack v3, adding Email Logic  Done.">
+      <created>1540138819846</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1540138819846</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73757000" />
+    <option name="totallyTimeSpent" value="75719000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -474,6 +547,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22147651" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -717,6 +791,52 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/back-office/back-office-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/back-office/back-office.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/front-office/front-office-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/front-office/front-office.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
