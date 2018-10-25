@@ -1,28 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6fdfa839-456d-454f-befc-e6122e489d05" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/back-office/back-office-routing.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/back-office/back-office.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/back-office/bo-menu/bo-menu.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/back-office/bo-menu/bo-menu.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/back-office/bo-menu/bo-menu.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/back-office/config-management/config-management.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/back-office/config-management/config-management.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/back-office/config-management/config-management.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/back-office/home-admin/home-admin.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/back-office/home-admin/home-admin.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/back-office/home-admin/home-admin.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/back-office/users-management/users-management.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/back-office/users-management/users-management.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/back-office/users-management/users-management.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/front-office/bf-menu/bf-menu.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/front-office/bf-menu/bf-menu.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/front-office/bf-menu/bf-menu.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/front-office/front-office-routing.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/front-office/front-office.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+    <list default="true" id="6fdfa839-456d-454f-befc-e6122e489d05" name="Default Changelist" comment="stack v3, adding Email Logic  Done.">
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/config/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/css/animate.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/css/demo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/css/paper-dashboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/css/themify-icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/fonts/themify.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/fonts/themify.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/fonts/themify.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/fonts/themify.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/img/apple-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/img/background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/img/faces/face-0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/img/faces/face-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/img/faces/face-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/img/faces/face-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/img/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/img/new_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/img/tim_80x80.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/js/bootstrap-checkbox-radio.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/js/bootstrap-notify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/js/chartist.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/js/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/js/paper-dashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/scss/paper-dashboard.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/scss/paper/_alerts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/scss/paper/_buttons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/scss/paper/_cards.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/scss/paper/_chartist.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/scss/paper/_checkbox-radio.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/scss/paper/_dropdown.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/scss/paper/_footers.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/scss/paper/_inputs.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/scss/paper/_misc.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/scss/paper/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/scss/paper/_navbars.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/scss/paper/_responsive.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/scss/paper/_sidebar-and-main-panel.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/scss/paper/_tables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/scss/paper/_typography.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/scss/paper/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/scss/paper/mixins/_buttons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/scss/paper/mixins/_cards.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/scss/paper/mixins/_chartist.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/scss/paper/mixins/_icons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/scss/paper/mixins/_inputs.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/scss/paper/mixins/_labels.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/scss/paper/mixins/_navbars.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/scss/paper/mixins/_sidebar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/scss/paper/mixins/_tabs.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/scss/paper/mixins/_transparency.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/scss/paper/mixins/_vendor-prefixes.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/ConfigController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/Config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/back-office/back-office-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/modules/back-office/back-office-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/back-office/back-office.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/modules/back-office/back-office.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/back-office/bo-menu/bo-menu.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/modules/back-office/bo-menu/bo-menu.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/back-office/bo-menu/bo-menu.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/modules/back-office/bo-menu/bo-menu.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/back-office/bo-menu/bo-menu.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/modules/back-office/bo-menu/bo-menu.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/back-office/config-management/config-management.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/modules/back-office/config-management/config-management.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/back-office/config-management/config-management.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/modules/back-office/config-management/config-management.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/back-office/config-management/config-management.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/modules/back-office/config-management/config-management.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/back-office/home-admin/home-admin.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/modules/back-office/home-admin/home-admin.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/back-office/home-admin/home-admin.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/modules/back-office/home-admin/home-admin.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/back-office/home-admin/home-admin.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/modules/back-office/home-admin/home-admin.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/back-office/users-management/users-management.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/modules/back-office/users-management/users-management.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/back-office/users-management/users-management.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/modules/back-office/users-management/users-management.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/back-office/users-management/users-management.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/modules/back-office/users-management/users-management.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/front-office/bf-menu/bf-menu.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/modules/front-office/bf-menu/bf-menu.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/front-office/bf-menu/bf-menu.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/modules/front-office/bf-menu/bf-menu.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/front-office/bf-menu/bf-menu.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/modules/front-office/bf-menu/bf-menu.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/front-office/front-office-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/modules/front-office/front-office-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/front-office/front-office.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/modules/front-office/front-office.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/Config.json" beforeDir="false" afterPath="$PROJECT_DIR$/Config/Config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/AuthController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/AuthController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/HomeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/HomeController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/UsersController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UsersController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -85,118 +150,92 @@
     <session id="-1514070683">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="234" />
-          <entry key="js" value="8893" />
-          <entry key="json" value="756" />
-          <entry key="ts" value="2" />
-          <entry key="txt" value="19" />
+          <entry key="html" value="354" />
+          <entry key="js" value="9170" />
+          <entry key="json" value="766" />
+          <entry key="scss" value="303" />
+          <entry key="ts" value="246" />
+          <entry key="txt" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="234" />
-          <entry key="JSON" value="756" />
-          <entry key="JavaScript" value="8893" />
-          <entry key="PLAIN_TEXT" value="19" />
-          <entry key="TypeScript" value="2" />
+          <entry key="HTML" value="354" />
+          <entry key="JSON" value="766" />
+          <entry key="JavaScript" value="9170" />
+          <entry key="PLAIN_TEXT" value="25" />
+          <entry key="SCSS" value="303" />
+          <entry key="TypeScript" value="246" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="PNG" value="1" />
           <entry key="]" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="html" value="1" />
-          <entry key="js" value="51" />
-          <entry key="json" value="11" />
+          <entry key="html" value="6" />
+          <entry key="js" value="68" />
+          <entry key="json" value="15" />
           <entry key="npm" value="1" />
-          <entry key="scss" value="1" />
-          <entry key="ts" value="6" />
+          <entry key="scss" value="5" />
+          <entry key="ts" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="1" />
-          <entry key="JSON" value="10" />
-          <entry key="JavaScript" value="51" />
+          <entry key="HTML" value="6" />
+          <entry key="Image" value="1" />
+          <entry key="JSON" value="14" />
+          <entry key="JavaScript" value="68" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="SCSS" value="1" />
-          <entry key="TypeScript" value="6" />
+          <entry key="SCSS" value="5" />
+          <entry key="TypeScript" value="23" />
           <entry key="tsconfig" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="Angular2LanguageService" value="1" />
+          <entry key="Angular2LanguageService" value="3" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ClientApp/src/app/app.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#58#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/ClientApp/src/app/services/auth.service.ts">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ClientApp/src/app/back-office/back-office-routing.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ClientApp/src/app/back-office/back-office.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/ClientApp/src/environments/environment.prod.ts">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ClientApp/src/app/front-office/front-office.module.ts">
+        <entry file="file://$PROJECT_DIR$/ClientApp/src/assets/config/config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ClientApp/src/app/front-office/front-office-routing.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/ClientApp/src/environments/environment.ts">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -204,8 +243,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -222,6 +261,8 @@
       <find>Authorization header is null</find>
       <find>port</find>
       <find>defaul</find>
+      <find>routesUser</find>
+      <find>../fonts/glyphicons-halflings-regular.eot</find>
     </findStrings>
     <replaceStrings>
       <replace>_u.console</replace>
@@ -230,6 +271,7 @@
       <replace>_u</replace>
       <replace>routesAuths</replace>
       <replace>routesHome</replace>
+      <replace>routesConfig</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -247,16 +289,33 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/Assets/Templates/UserCreation.html" />
         <option value="$PROJECT_DIR$/Factories/EmailSender.js" />
-        <option value="$PROJECT_DIR$/Config/Config.json" />
-        <option value="$PROJECT_DIR$/Controllers/AuthController.js" />
-        <option value="$PROJECT_DIR$/Controllers/HomeController.js" />
         <option value="$PROJECT_DIR$/Config/Config.js" />
-        <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/Factories/Utilities.js" />
         <option value="$PROJECT_DIR$/Models/User.js" />
-        <option value="$PROJECT_DIR$/Controllers/UsersController.js" />
         <option value="$PROJECT_DIR$/ClientApp/.angular-cli.json" />
         <option value="$PROJECT_DIR$/ClientApp/src/app/back-office/back-office.module.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/assets/config/config.json" />
+        <option value="$PROJECT_DIR$/Models/Config.js" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/modules/front-office/front-office.module.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/modules/back-office/back-office-routing.module.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/modules/front-office/front-office-routing.module.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/modules/front-office/bf-menu/bf-menu.component.html" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/modules/back-office/bo-menu/bo-menu.component.html" />
+        <option value="$PROJECT_DIR$/Config/Config.json" />
+        <option value="$PROJECT_DIR$/Controllers/AuthController.js" />
+        <option value="$PROJECT_DIR$/Controllers/ConfigController.js" />
+        <option value="$PROJECT_DIR$/Controllers/HomeController.js" />
+        <option value="$PROJECT_DIR$/Controllers/UsersController.js" />
+        <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/app-routing.module.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/modules/shared/shared-routing.module.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/ClientApp/src/assets/scss/paper-dashboard.scss" />
+        <option value="$PROJECT_DIR$/ClientApp/src/styles.scss" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/modules/shared/login/login.component.html" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/modules/shared/login/login.component.scss" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/app.component.ts" />
       </list>
     </option>
   </component>
@@ -285,9 +344,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+    <option name="x" value="-10" />
+    <option name="width" value="979" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -297,6 +356,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -320,29 +380,35 @@
               <item name="Stack" type="462c0819:PsiDirectoryNode" />
               <item name="ClientApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Stack" type="b2602c69:ProjectViewProjectNode" />
               <item name="Stack" type="462c0819:PsiDirectoryNode" />
               <item name="ClientApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="back-office" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Stack" type="b2602c69:ProjectViewProjectNode" />
               <item name="Stack" type="462c0819:PsiDirectoryNode" />
-              <item name="ClientApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="front-office" type="462c0819:PsiDirectoryNode" />
+              <item name="Config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Stack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Stack" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Stack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Stack" type="462c0819:PsiDirectoryNode" />
+              <item name="Factories" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -369,7 +435,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lenovo\Projects\Stack\ClientApp\src\app\modules" />
       <recent name="C:\Users\lenovo\Projects\MyPortFolio" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lenovo\Projects\Stack\ClientApp\src\assets" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -385,10 +455,10 @@
     </option>
   </component>
   <component name="RunManager" selected="npm.Run Angular Server">
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-js-file="server.js" working-dir="$PROJECT_DIR$">
+    <configuration name="Node Server " type="NodeJSConfigurationType" factoryName="Node.js" path-to-js-file="server.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
-    <configuration name="portfolio" type="NodeJSConfigurationType" factoryName="Node.js" path-to-js-file="server.js" working-dir="$PROJECT_DIR$">
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-js-file="server.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <configuration name="Run Angular Server" type="js.build_tools.npm" factoryName="npm">
@@ -400,7 +470,7 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Node.js.portfolio" />
+      <item itemvalue="Node.js.Node Server " />
       <item itemvalue="npm.Run Angular Server" />
     </list>
   </component>
@@ -423,7 +493,9 @@
       <workItem from="1540033509448" duration="5301000" />
       <workItem from="1540038851689" duration="33620000" />
       <workItem from="1540077376201" duration="2676000" />
-      <workItem from="1540120491269" duration="20011000" />
+      <workItem from="1540120491269" duration="23104000" />
+      <workItem from="1540214309943" duration="5409000" />
+      <workItem from="1540465804362" duration="8644000" />
     </task>
     <task id="LOCAL-00001" summary="some work at server, begin loading Routes">
       <created>1539941455885</created>
@@ -530,11 +602,18 @@
       <option name="project" value="LOCAL" />
       <updated>1540138819846</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="stack v3, adding Email Logic  Done.">
+      <created>1540141603422</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1540141603422</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75719000" />
+    <option name="totallyTimeSpent" value="92865000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -549,6 +628,29 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19695969" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
+      <window_info anchor="bottom" x="0" y="23" width="1536" height="801" id="Run" order="2" type="WINDOWED" visible="true" weight="1.0" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4976867" weight="0.32907802" />
+      <window_info anchor="bottom" id="TypeScript" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50231326" side_tool="true" weight="0.32907802" />
+      <window_info anchor="bottom" x="0" y="23" width="1536" height="801" id="Terminal" order="11" sideWeight="0.49966952" type="WINDOWED" weight="0.3248227" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32907802" />
+      <window_info anchor="bottom" id="Tail" order="13" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24966443" />
+    </layout>
+    <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22147651" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
@@ -570,7 +672,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24966443" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -586,41 +688,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="stack v3, adding Email Logic  Done." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Client/node_modules/ngx-bootstrap/tooltip/tooltip.module.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="11796" column="12" selection-start-line="11796" selection-start-column="12" selection-end-line="11796" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/mongoose/lib/schema.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
@@ -672,76 +739,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Factories/ResponseBuilder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="19" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Factories/ResponseBuilder.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/jsonwebtoken/index.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Config/Config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="65" column="19" lean-forward="true" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controllers/AuthController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/compiler/compiler.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
           <caret line="296" column="6" selection-start-line="296" selection-start-column="6" selection-end-line="296" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Config/Config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Factories/Utilities.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="174" column="28" selection-start-line="174" selection-start-column="28" selection-end-line="174" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/User.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="38" selection-start-column="38" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controllers/UsersController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controllers/HomeController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -763,13 +768,7 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ClientApp/protractor.conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ClientApp/.angular-cli.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -779,64 +778,241 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ClientApp/src/typings.d.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/User.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="385">
+          <caret line="39" column="10" selection-start-line="3" selection-end-line="53" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/Config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Config/Config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/modules/front-office/bf-menu/bf-menu.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/modules/front-office/bf-menu/bf-menu.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/modules/back-office/back-office.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/modules/back-office/back-office-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/modules/front-office/front-office.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/modules/back-office/bo-menu/bo-menu.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Config/Config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="65" column="19" lean-forward="true" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Factories/Utilities.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="174" column="28" selection-start-line="174" selection-start-column="28" selection-end-line="174" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/AuthController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="79" column="36" lean-forward="true" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/HomeController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/UsersController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="169" column="34" selection-start-line="169" selection-start-column="34" selection-end-line="169" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/ConfigController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/paper-dashboard-html-v1.2.1/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="36" column="1" selection-start-line="36" selection-end-line="361" selection-end-column="6" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ClientApp/src/styles.scss">
+    <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="538">
+          <caret line="75" column="59" selection-start-line="75" selection-start-column="59" selection-end-line="75" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ClientApp/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/back-office/back-office-routing.module.ts">
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/modules/shared/shared.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="221">
+          <caret line="13" column="21" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="25" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/back-office/back-office.module.ts">
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/app.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+        <state relative-caret-position="17">
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/modules/front-office/front-office-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="7" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="24" selection-end-column="3" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/front-office/front-office-routing.module.ts">
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/modules/shared/shared-routing.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="170">
+          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/front-office/front-office.module.ts">
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/assets/img/Background.PNG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/assets/scss/paper-dashboard.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="538">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="55" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/modules/shared/login/login.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/modules/shared/login/login.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="116" column="26" selection-start-line="116" selection-start-column="26" selection-end-line="116" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/app-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/services/auth.service.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/environments/environment.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/environments/environment.prod.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/assets/config/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>

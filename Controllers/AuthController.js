@@ -9,7 +9,7 @@ routesAuths = [
         path: `/Auth/login`,
         httpMethod: 'POST',
         require: {},
-        middleware: [function (req, res) {
+        middleware: [(req, res) => {
             _u.PrintReq(req, true);
             try {
                 switch (req.body.username) {
@@ -74,10 +74,10 @@ routesAuths = [
     }
 ]
 
-module.exports = function (app) {
+module.exports = (app) => {
 
 
-    _.each(routesAuths, function (route) {
+    _.each(routesAuths,  (route) =>{
         route.middleware.unshift((req, res, next) => {
             _u.verifyToken(req, res, next, routesAuths);
         });

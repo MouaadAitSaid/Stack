@@ -78,9 +78,5 @@
       }
     },
     "tmplsPath" : "/Assets/Templates/"
-  },
-  "injectionData" : {
-    "Routes" : [{"name" : "Home","path" :""},{"name" :"Users","path" :"Users"},{"name" :"Auth","path" :"Auth"}],
-    "Models"  : ["User"]
   }
 }

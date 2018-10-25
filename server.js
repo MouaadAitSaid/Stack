@@ -6,7 +6,8 @@ let _ = require('lodash'),
     _config = require('./Config/Config.js'),// getting th config file
     path = require('path'),
     app = express(),
-    async = require("async");
+    async = require("async"),
+    fs = require("fs");
 
 //seeting the root path to global variable
 global.appRoot = path.resolve(__dirname);
@@ -27,27 +28,29 @@ process.env.NODE_ENV = 'dev';
 
 
 // injecting Models
-
-_.forEach(global.injectionData.Models, (prefix) => {
-    try {
-        require("./Models/" + prefix)(mongoose);
-    } catch (e) {
-        console.log(`Failed to load Model "${prefix}" ${e}`, true);
-    }
+var files = fs.readdirSync('./Models/').filter( (x)=> {
+    return x.substr(-3) === ".js";
 });
-
+for (var i = 0; i !== files.length; ++i) {
+    try {
+        require('./Models/'+ files[i])(mongoose);
+    } catch (e) {
+        console.log(`Failed to load Model "${files[i]}" ${e}`);
+    }
+}
 
 // injecting Routes :
-
-
-_.forEach(global.injectionData.Routes, (route) => {
-    try {
-        require("./Controllers/" + route.name + "Controller")(app);
-    } catch (e) {
-        console.log(`Failed to load route "${route.name}" : ${e}`, true);
-    }
-
+files = fs.readdirSync('./Controllers/').filter( (x)=> {
+    return x.substr(-3) === ".js";
 });
+for (var k = 0; k !== files.length; ++k) {
+    try {
+        require('./Controllers/'+ files[k])(app);
+    } catch (e) {
+        console.log(`Failed to load Route "${files[k]}" ${e}`);
+    }
+}
+
 
 // When Route is 404 (Not working Yet)
 /*app.use(function(req, res, next) {
@@ -62,7 +65,7 @@ let dbName = global.gConfig.database.name;
 let dbPort = global.gConfig.database.port;
 mongoose.connect(`mongodb://${dbHost}:${dbPort}/${dbName}`, {useNewUrlParser: true}, (err) => {
     if (err) console.log(`Database not connected "mongodb://${dbHost}:${dbPort}/${dbName}\n ${err}"`, true);
-    else console.log(`Database connected "mongodb://${dbHost}:${dbPort}/${dbName}"`, true);
+    else console.log(`Database connected "mongodb://${dbHost}:${dbPort}/${dbName}"`);
 
 });
 
@@ -70,5 +73,5 @@ app.listen(global.gConfig.port, function () {
     let port = global.gConfig.port
     let host = global.gConfig.server
 
-    console.log(`app listening at "http://${host}:${port}"`, true)
+    console.log(`app listening at "http://${host}:${port}"`)
 });

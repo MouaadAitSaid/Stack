@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import './assets/scss/paper-dashboard';
+
+html{
+  background-image: url("./assets/img/BackgroundBis.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

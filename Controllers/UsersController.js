@@ -15,7 +15,7 @@ routesUser = [
             token : true,
             roles : ["Admin"]
         },
-        middleware: [function (req, res) {
+        middleware: [(req, res) => {
             _u.PrintReq(req, true,req.headers);
             try {
                 let user = new User(req.body);
@@ -58,7 +58,7 @@ routesUser = [
             token : true,
             roles : ["admin"]
         },
-        middleware: [function (req, res) {
+        middleware: [(req, res) => {
             _u.PrintReq(req, false,req.headers);
             try {
                 return User.find({}, (err, users) => {
@@ -79,7 +79,7 @@ routesUser = [
             token : true,
             roles : ["Admin"]
         },
-        middleware: [function (req, res) {
+        middleware: [(req, res) => {
             _u.PrintReq(req, true);
             try {
                 return User.findById(req.params.id, (err, user) => {
@@ -100,7 +100,7 @@ routesUser = [
             token : true,
             roles : ["admin"]
         },
-        middleware: [function (req, res) {
+        middleware: [(req, res) => {
             _u.PrintReq(req, true);
 
             try {
@@ -133,7 +133,7 @@ routesUser = [
             token : true,
             roles : ["Admin"]
         },
-        middleware: [function (req, res) {
+        middleware: [(req, res) => {
             _u.PrintReq(req, true);
             try {
                 return User.findById(req.params.id, (err, user) => {
@@ -165,9 +165,9 @@ updateUser = (old, user, cb) => {
     old.password = user.password;
     cb(old);
 };
-module.exports = function (app) {
+module.exports = (app) => {
 
-    _.each(routesUser, function (route) {
+    _.each(routesUser, (route) =>{
         route.middleware.unshift((req, res, next) => {
             _u.verifyToken(req, res, next, routesUser);
         });
@@ -193,4 +193,4 @@ module.exports = function (app) {
         }
     });
 
-}
+};

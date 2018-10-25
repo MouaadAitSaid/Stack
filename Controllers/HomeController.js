@@ -15,9 +15,9 @@ routesHome = [
         }]
     }
 ]
-module.exports = function (app) {
+module.exports = (app) => {
 
-    _.each(routesHome, function (route) {
+    _.each(routesHome, (route) =>{
         route.middleware.unshift((req, res, next) => {
             _u.verifyToken(req, res, next, routesHome);
         });
