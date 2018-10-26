@@ -6,7 +6,7 @@ let _ = require('lodash'),
 
 routesConfig = [
     {  // removing  the record
-        path: '/Config',
+        path: '/api/Config',
         httpMethod: 'POST',
         require: {
             superAdmin: true,

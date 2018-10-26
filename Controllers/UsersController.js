@@ -8,7 +8,7 @@ let _ = require('lodash'),
 
 routesUser = [
     {  // Saving the record
-        path: '/Users',
+        path: '/api/Users',
         httpMethod: 'POST',
         require: {
             superAdmin : false,
@@ -51,7 +51,7 @@ routesUser = [
         }]
     },
     {  // getting the list
-        path: '/Users',
+        path: '/api/Users',
         httpMethod: 'GET',
         require: {
             superAdmin : false,
@@ -72,7 +72,7 @@ routesUser = [
         }]
     },
     {  // getting the record
-        path: '/Users/:id',
+        path: '/api/Users/:id',
         httpMethod: 'GET',
         require: {
             superAdmin : false,
@@ -93,7 +93,7 @@ routesUser = [
         }]
     },
     {  // modifying the record
-        path: '/Users/:id',
+        path: 'api/Users/:id',
         httpMethod: 'PUT',
         require: {
             superAdmin : false,
@@ -126,7 +126,7 @@ routesUser = [
         }]
     },
     {  // removing  the record
-        path: '/Users/:id',
+        path: '/api/Users/:id',
         httpMethod: 'DELETE',
         require: {
             superAdmin : false,

@@ -4,7 +4,7 @@ let _ = require('lodash'),
 
 routesHome = [
     {
-        path: '',
+        path: '/api/',
         httpMethod: 'GET',
         require: {},
         middleware: [function (req, res) {

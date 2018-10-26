@@ -6,7 +6,7 @@ let _ = require('lodash'),
 
 routesAuths = [
     {
-        path: `/Auth/login`,
+        path: `/api/Auth/login`,
         httpMethod: 'POST',
         require: {},
         middleware: [(req, res) => {
