@@ -3,6 +3,7 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {User} from "../../../models/user";
 import {AuthService} from "../../../services/auth.service";
 import {UtilsService} from "../../../services/utils.service";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -16,7 +17,6 @@ export class LoginComponent implements OnInit {
 
   };
   user : User;
-  connectedUser : User;
   userForm : FormGroup;
 
 
@@ -35,9 +35,17 @@ export class LoginComponent implements OnInit {
     this.user= new User();
     this.user.buildLogin(this.userForm.get('username').value,this.userForm.get('password').value);
     this.authSvc.login(this.user).subscribe((response)=> {
-      this.connectedUser = new User();
-      this._u.console('w',true,response);
-      //this.connectedUser.buildConnectedUser(response['fi'])
+      if(response["status"])
+       this.authSvc.storeUser(response['token'],(res)=>{
+          if(res)
+            this.authSvc.manageRole(res);
+         else
+            this._u.console("e",true,"Token generation failed");
+       });
+      else
+        this._u.console("e",true,"Token generation failed");
+    },(error)=>{
+      this._u.console("e",true,`Token generation failed ${error}`);
     });
   };
 

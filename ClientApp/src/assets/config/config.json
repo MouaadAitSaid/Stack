@@ -3,6 +3,7 @@
     "url" : "http://localhost:1994/"
   },
   "opts" : {
-    "showLogs" : true
+    "showLogs" : true,
+    "localStorage" : true
   }
 }
