@@ -10,60 +10,65 @@ routesAuths = [
         httpMethod: 'POST',
         require: {},
         middleware: [(req, res) => {
-            _u.PrintReq(req, true);
+            _u.PrintReq(req, false);
             try {
-                switch (req.body.username) {
-                    case global.gConfig.sAdmin.username :
-                        if (global.gConfig.sAdmin.password !== req.body.password) {
-                            return _u.build(res, 200, {
-                                status: true,
-                                message: "Invalid credentiels",
-                                data: null
-                            });
-                        }
-                        let saData = global.gConfig.sAdmin;
-                        saData.username = null;
-                        saData.password = null;
-                        return _u.getToken(saData, (token) => {
-                            return _u.build(res, 200, {
-                                status: true,
-                                message: "Login Done. Welcome Super Admin. :) .",
-                                token: token
-                            });
+                _u.console("w", true, `req : ${req.body.username} config : ${global.gConfig.sAdmin.username}`);
+                if (req.body.username !== global.gConfig.sAdmin.username) {
+                    _u.console("w", false, global.gConfig);
+                    return User.findOne({username: req.body.username}).select('+password').exec((err, user) => {
+                        if (err) return _u.build(res, 508, {status: false, message: "Oups, something went wrong"});
+                        if (!user) return _u.build(res, 200, {
+                            status: true,
+                            message: "Invalid credentiels",
+                            data: null
                         });
-                    default :
-                        return User.findOne({username: req.body.username}).select('+password').exec((err, user) => {
-                            if (err) return _u.build(res, 508, {status: false, message: "Oups, something went wrong"});
-                            if (!user) return _u.build(res, 200, {
+                        return _u.comparePasswords(user.password, req.body.password, (isGoodPassword) => {
+                            if (!isGoodPassword) return _u.build(res, 200, {
                                 status: true,
                                 message: "Invalid credentiels",
                                 data: null
                             });
-                            return _u.comparePasswords(user.password, req.body.password, (isGoodPassword) => {
-                                if (!isGoodPassword) return _u.build(res, 200, {
+                            user.password = null;
+                            user.salt = null;
+                            _u.getToken({
+                                _id: user._id,
+                                firstName: user.firstName,
+                                email: user.email,
+                                lastName: user.lastName,
+                                role: user.role,
+                                otherInfos: user.otherInfos
+                            }, (token) => {
+                                return _u.build(res, 200, {
                                     status: true,
-                                    message: "Invalid credentiels",
-                                    data: null
+                                    message: "Login Done. Welcome :) .",
+                                    token: token
                                 });
-                                user.password = null;
-                                user.salt = null;
-                                _u.getToken({
-                                    _id: user._id,
-                                    firstName: user.firstName,
-                                    email: user.email,
-                                    lastName: user.lastName,
-                                    role: user.role,
-                                    otherInfos: user.otherInfos
-                                }, (token) => {
-                                    return _u.build(res, 200, {
-                                        status: true,
-                                        message: "Login Done. Welcome :) .",
-                                        token: token
-                                    });
-                                });
+                            });
 
-                            })
                         })
+                    })
+
+
+                }
+                else {
+                    _u.console("w", false, "InAdmin");
+                    if (global.gConfig.sAdmin.password !== req.body.password) {
+                        return _u.build(res, 200, {
+                            status: true,
+                            message: "Invalid credentiels",
+                            data: null
+                        });
+                    }
+                    let saData =  Object.assign({}, global.gConfig.sAdmin);
+                    saData.username = null;
+                    saData.password = null;
+                    return _u.getToken(saData, (token) => {
+                        return _u.build(res, 200, {
+                            status: true,
+                            message: "Login Done. Welcome Super Admin. :) .",
+                            token: token
+                        });
+                    });
                 }
 
             } catch (e) {
@@ -77,7 +82,7 @@ routesAuths = [
 module.exports = (app) => {
 
 
-    _.each(routesAuths,  (route) =>{
+    _.each(routesAuths, (route) => {
         route.middleware.unshift((req, res, next) => {
             _u.verifyToken(req, res, next, routesAuths);
         });

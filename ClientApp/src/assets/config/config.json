@@ -1,5 +1,8 @@
 {
   "server" : {
-    "url" : "http://localhost:1994"
+    "url" : "http://localhost:1994/"
+  },
+  "opts" : {
+    "showLogs" : true
   }
 }

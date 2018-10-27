@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import {AuthService} from "./services/auth.service";
 import {ConfigService, configurationServiceInitializerFactory} from "./modules/config";
 import { HttpClientModule } from '@angular/common/http';
+import {UtilsService} from "./services/utils.service";
 
 
 
@@ -21,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
 
   ],
   providers: [
+    UtilsService,
     AuthService,
     ConfigService,
     { provide: APP_INITIALIZER, useFactory: configurationServiceInitializerFactory, deps: [ConfigService], multi: true }

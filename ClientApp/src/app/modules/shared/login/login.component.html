@@ -1,10 +1,20 @@
 <div class="login">
 
-    <h1>Login</h1>
-    <form class="insideLogin" [formGroup]="userForm" (ngSubmit)="login()" >
-      <input type="text" name="u" formControlName="username"   placeholder="Username" required="required"/>
-      <input type="password" name="p" formControlName="password"  placeholder="Password" required="required"/>
-      <button type="submit" class="btn  btn-block btn-large">Open SimSim</button>
-    </form>
-    <h4>Welcome to ASM-Dummy Stack</h4>
+  <h1> <i class="zmdi zmdi-account-circle zmdi-hc-lg"></i></h1>
+  <h1>Login</h1>
+  <form class="insideLogin" [formGroup]="userForm" (ngSubmit)="login()">
+    <div class="input-group">
+      <i class="zmdi zmdi-shield-check  zmdi-hc-lg" [ngClass]="{'mdc-text-red-700':username.invalid && (username.dirty || username.touched),'mdc-text-green':username.valid && (username.dirty || username.touched)}"></i>
+      <input type="text" name="u" formControlName="username" class="form-control" id="username" placeholder="Username" required/>
+    </div>
+    <div class="input-group">
+      <i class="zmdi zmdi-shield-check zmdi-hc-lg" [ngClass]="{'mdc-text-red-700':password.invalid && (password.dirty || password.touched),'mdc-text-green':password.valid && (password.dirty || password.touched)}"></i>
+      <input type="password" name="p" formControlName="password" id="password" placeholder="Password" class="form-control" required/>
+    </div>
+    <div>
+      <button type="submit" [disabled]="!userForm.valid" class="btn  btn-block btn-large">Open SimSim</button>
+    </div>
+
+  </form>
+  <h4>Welcome to ASM-Dummy Stack</h4>
 </div>
