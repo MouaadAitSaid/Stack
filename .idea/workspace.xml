@@ -1,32 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6fdfa839-456d-454f-befc-e6122e489d05" name="Default Changelist" comment="stack v3, adding Email Logic  Done.">
-      <change afterPath="$PROJECT_DIR$/.idea/typescript-compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/services/utils.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/css/material-design-color-palette.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/css/material-design-iconic-font.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/css/material-design-iconic-font.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/fonts/Material-Design-Iconic-Font.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/fonts/Material-Design-Iconic-Font.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/fonts/Material-Design-Iconic-Font.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/fonts/Material-Design-Iconic-Font.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/assets/fonts/Material-Design-Iconic-Font.woff2" afterDir="false" />
+    <list default="true" id="6fdfa839-456d-454f-befc-e6122e489d05" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/models/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/models/user.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/modules/shared/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/modules/shared/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/modules/shared/login/login.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/modules/shared/login/login.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/modules/shared/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/modules/shared/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/modules/shared/shared.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/modules/shared/shared.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/services/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/assets/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/assets/config/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/Config.js" beforeDir="false" afterPath="$PROJECT_DIR$/Config/Config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/AuthController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/AuthController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -102,7 +78,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="720" />
-          <entry key="js" value="9377" />
+          <entry key="js" value="9387" />
           <entry key="json" value="832" />
           <entry key="scss" value="507" />
           <entry key="ts" value="1581" />
@@ -113,7 +89,7 @@
         <counts>
           <entry key="HTML" value="720" />
           <entry key="JSON" value="832" />
-          <entry key="JavaScript" value="9377" />
+          <entry key="JavaScript" value="9387" />
           <entry key="PLAIN_TEXT" value="30" />
           <entry key="SCSS" value="507" />
           <entry key="TypeScript" value="1581" />
@@ -166,7 +142,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ClientApp/src/app/modules/shared/login/login.component.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="372">
@@ -178,11 +154,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controllers/AuthController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="58" column="38" lean-forward="true" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
+            <state relative-caret-position="153">
+              <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -549,7 +525,7 @@
       <workItem from="1540077376201" duration="2676000" />
       <workItem from="1540120491269" duration="23104000" />
       <workItem from="1540214309943" duration="5409000" />
-      <workItem from="1540465804362" duration="39882000" />
+      <workItem from="1540465804362" duration="40127000" />
     </task>
     <task id="LOCAL-00001" summary="some work at server, begin loading Routes">
       <created>1539941455885</created>
@@ -691,11 +667,18 @@
       <option name="project" value="LOCAL" />
       <updated>1540572296323</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="stack v3, adding Email Logic  Done.">
+      <created>1540659730826</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1540659730826</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124103000" />
+    <option name="totallyTimeSpent" value="124348000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -709,13 +692,13 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49928263" visible="true" weight="0.32980832" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49928263" visible="true" weight="0.32980832" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.50071734" side_tool="true" weight="0.40053764" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" x="769" y="30" width="767" height="793" id="Run" order="2" type="WINDOWED" visible="true" weight="1.0" />
+      <window_info anchor="bottom" x="769" y="30" width="767" height="793" id="Run" order="2" type="WINDOWED" visible="true" weight="1.0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1105,6 +1088,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/AuthController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Config/Config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1119,13 +1109,6 @@
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controllers/AuthController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="58" column="38" lean-forward="true" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
         </state>
       </provider>
     </entry>
