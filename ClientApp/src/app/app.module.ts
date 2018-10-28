@@ -6,6 +6,8 @@ import {AuthService} from "./services/auth.service";
 import {ConfigService, configurationServiceInitializerFactory} from "./modules/config";
 import { HttpClientModule } from '@angular/common/http';
 import {UtilsService} from "./services/utils.service";
+import {AuthGuardGuard} from "./services/guards/auth-guard.guard";
+import {AdminGuard} from "./services/guards/admin.guard";
 
 
 
@@ -22,6 +24,8 @@ import {UtilsService} from "./services/utils.service";
 
   ],
   providers: [
+    AdminGuard,
+    AuthGuardGuard,
     UtilsService,
     AuthService,
     ConfigService,

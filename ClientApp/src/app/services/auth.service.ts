@@ -6,6 +6,7 @@ import * as jwt_decode from "jwt-decode";
 import {UtilsService} from "./utils.service";
 import {split} from "ts-node";
 import {Router} from "@angular/router";
+import {debug} from "util";
 
 
 @Injectable()
@@ -30,11 +31,13 @@ export class AuthService {
 
       if (this.tokenMethod) {
         localStorage.setItem('token', data);
-        localStorage.setItem('cUser', userData);
+        localStorage.setItem('cUser', JSON.stringify(userData));
       } else {
         sessionStorage.setItem('token', data);
-        sessionStorage.setItem('cUser', userData);
+        sessionStorage.setItem('cUser', JSON.stringify(userData));
       }
+      this._u.console("w", true, userData.exp);
+      
       cb(userData.role);
     } else {
       cb(false)
@@ -44,6 +47,7 @@ export class AuthService {
   manageRole = (role) => {
     switch (role) {
       case "SuperAdmin" :
+        
         this.router.navigate(['Admin/Home']);
         break;
       default :
@@ -51,16 +55,44 @@ export class AuthService {
     }
   };
 
+  gteUserRole = ()=>{
+    let payload = null;
+    if (this.tokenMethod) {
+      payload = JSON.parse(localStorage.getItem('cUser'));
+    } else {
+      payload = JSON.parse(sessionStorage.getItem('cUser'));
+    }
+    if(payload!==null)
+      return payload.role
+    this.logout();
+  };
+
   logout = () => {
     if (this.tokenMethod) {
       localStorage.removeItem('cUser');
+      localStorage.removeItem('token');
     } else {
       sessionStorage.removeItem('cUser');
+      sessionStorage.removeItem('token');
     }
-    this.router.navigate([''])
+    this.router.navigate(['Login'])
   };
+
+
   isLogged = (): boolean => {
-    return !!sessionStorage.getItem('token');
+    let payload = null;
+    this._u.console("i", false, localStorage.getItem('cUser'));
+    if (this.tokenMethod) {
+      
+      payload = JSON.parse(localStorage.getItem('cUser'));
+    } else {
+      payload = JSON.parse(sessionStorage.getItem('cUser'));
+    }
+    var current_time = new Date().getTime() / 1000;
+    if (payload!==null)
+      return current_time < payload.exp;
+    else
+      return false
   };
 
 

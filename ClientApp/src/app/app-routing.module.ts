@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {AuthGuardGuard} from "./services/guards/auth-guard.guard";
 
 const routes: Routes = [
   {
@@ -9,11 +10,13 @@ const routes: Routes = [
   },
   {
     path: 'Admin',
-    loadChildren: './modules/back-office/back-office.module#BackOfficeModule'
+    loadChildren: './modules/back-office/back-office.module#BackOfficeModule',
+    canActivate : [AuthGuardGuard]
   },
   {
     path: 'Site',
-    loadChildren: './modules/front-office/front-office.module#FrontOfficeModule'
+    loadChildren: './modules/front-office/front-office.module#FrontOfficeModule',
+    canActivate : [AuthGuardGuard]
   },
   {
     path: 'Login',
